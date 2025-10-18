@@ -1,0 +1,52 @@
+services:
+    nginx:
+     image: nginx:1.29.1-perl
+     container_name: AltheraLab_nginx
+     ports:
+      - "8898:80"
+      - "8897:81"
+     volumes:
+      - ./src:/src
+      - ./nginx/config.conf:/etc/nginx/conf.d/default.conf
+     depends_on:
+       - php
+     networks:
+      - AltheraLab
+    
+    php:
+     build: .
+     container_name: AltheraLab_php
+     command: sh -c "cd /src && composer install --ignore-platform-reqs && php-fpm"
+     volumes:
+      - ./src:/src
+     depends_on:
+      - mariadb
+     networks:
+      - AltheraLab
+
+    mariadb:
+     image: mariadb:12.0.2
+     container_name: AltheraLab_mariadb
+     environment:
+      - MARIADB_ROOT_PASSWORD=${MARIA_DB_ROOT_PWD}
+      - MARIADB_USER=${MARIA_DB_USER}
+      - MARIADB_PASSWORD=${MARIA_DB_USER_PWD} 
+     volumes:
+      # - ./db::::::/:/var/lib/mysql/
+      - ./dump/:/docker-entrypoint-initdb.d
+     networks:
+      - AltheraLab
+          
+    phpmyadmin:
+     image: phpmyadmin
+     container_name: AltheraLab_phpmyadmin
+     ports:
+      - 8890:80
+     links:
+      - mariadb:db
+     networks:
+      - AltheraLab
+      
+networks:
+  AltheraLab:
+  

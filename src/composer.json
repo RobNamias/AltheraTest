@@ -1,0 +1,22 @@
+{
+    "name": "althera/composer",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rodien Cedric"
+        }
+    ],
+    "optimize-autoloader": true,
+    "autoload": {
+        "psr-4": {
+            "app\\controller\\": "app/controller/",
+            "app\\model\\": "app/model/",
+            "app\\view\\": "app/view/",
+            "projects\\": "projects/"
+        }
+    },
+    "require": {
+        "nikic/fast-route": "^1.3",
+        "smarty/smarty": "^5.6"
+    }
+}
