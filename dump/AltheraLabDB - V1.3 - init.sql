@@ -20,7 +20,7 @@ CREATE TABLE fiche_produit(
    ram_type VARCHAR(16) ,
    consommation_watt INT,
    gpu_taille INT,
-   wattage INT,52876528
+   wattage INT,
    type_refroidissement VARCHAR(16) ,
    max_cooler_height INT,
    radiateur_taille INT,
