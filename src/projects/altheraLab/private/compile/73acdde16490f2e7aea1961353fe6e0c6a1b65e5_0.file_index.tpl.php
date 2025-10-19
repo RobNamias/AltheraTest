@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.6.0, created on 2025-10-18 13:46:32
+/* Smarty version 5.6.0, created on 2025-10-19 18:31:24
   from 'file:index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.6.0',
-  'unifunc' => 'content_68f37e188deed5_67647119',
+  'unifunc' => 'content_68f5125cdc16f0_97210900',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '73acdde16490f2e7aea1961353fe6e0c6a1b65e5' => 
     array (
       0 => 'index.tpl',
-      1 => 1760633103,
+      1 => 1760800886,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:components/product_card.tpl' => 1,
   ),
 ))) {
-function content_68f37e188deed5_67647119 (\Smarty\Template $_smarty_tpl) {
+function content_68f5125cdc16f0_97210900 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/src/projects/altheraLab/view';
 ?><!DOCTYPE html>
 <html lang="fr">
@@ -31,7 +31,7 @@ $_smarty_current_dir = '/src/projects/altheraLab/view';
     <title>Accueil</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/components/product_card.css">
+    <link rel="stylesheet" href="../../../app/asset/bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
